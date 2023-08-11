@@ -1,0 +1,28 @@
+.footer {
+    background-color: #9D6C82;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    color: lightgray;
+}
+
+.section {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+

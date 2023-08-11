@@ -1,0 +1,32 @@
+
+.email-container {
+    margin: 20px auto;
+    width: auto; 
+    padding: 0 20px; 
+    display: flex;
+    align-items: center;
+    background-color: #2B2F6C;
+    color: white;
+    padding: 10px;
+    
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.subscribe-button {
+    width: 30%; 
+    padding: 10px;
+    background-color: #C17F8B;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+
