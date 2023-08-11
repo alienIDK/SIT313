@@ -1,0 +1,97 @@
+body {
+    margin: px;
+    font-family: Arial, sans-serif;
+}
+
+.firstHeader {
+    display: flex;
+    align-items: center;
+    background-color: #2B2F6C;
+    color: white;
+    padding: 10px;
+}
+
+.firstHeader a {
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.firstHeader h1 {
+    margin: 0;
+}
+
+.left {
+    display: flex;
+}
+
+.right {
+    text-align: right;
+    flex-grow: 1;
+}
+
+
+.niceBackground-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.niceBackground-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.specialHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.specialHeaderTitle {
+    text-align: center;
+}
+
+
+.human-profile {
+    text-align: left;
+    padding: 20px;
+}
+
+.profile-wrapper {
+    display: flex;
+}
+
+.profile-container {
+    width: 200px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    display: flex;
+    flex-direction: column; /* Stack items vertically inside each container */
+    border: none;
+    padding: 1px;
+    margin-right: 5px; /* Add some spacing between containers */
+    margin-bottom: 5px; /* Add some spacing between rows */
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1px;
+}
+
+.name {
+    color: black;
+    font-size: 18px;
+}
+
+.description-heading {
+    color: black;
+    margin-bottom: 10px;
+
+}
+.description {
+    color: grey;
+    margin-bottom: 10px;
+}
+
