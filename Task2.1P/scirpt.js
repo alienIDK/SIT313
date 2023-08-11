@@ -41,7 +41,7 @@ app.post('/' , (req,res)=>{
     res.send("<h1>Something happen</h1>")
 
 
-    members:[
+    responseMessage:[
         {
         to_email : email,
         from_email: "ongm@deakin.edu.au",
@@ -66,4 +66,3 @@ console.log("Server is running on port 3000")
 
 
 // API KEY GENERATES: 5ad60bbbaf2c40ca2363d33fcfadbfc9-us21
-
