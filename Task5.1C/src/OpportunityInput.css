@@ -1,0 +1,79 @@
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e9e6e6;
+    border-radius: 5px;
+}
+
+.opportunity-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 95%;
+}
+
+.submit-button {
+    background-color: #313A5C;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.submit-button:hover {
+    background-color: #7c8bbf;
+}
+
+
+
+.payment-input-group {
+    display: flex;
+    align-items: center;
+}
+
+.payment-input-group label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.input-boxes {
+    display: flex;
+    align-items: center;
+}
+
+.input-boxes input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.divider {
+    margin: 0 5px;
+}
+
+input[type="number"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 95%;
+}

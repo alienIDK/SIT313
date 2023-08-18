@@ -1,0 +1,71 @@
+/* Center the buttons */
+.niceBackground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Let content be in the middle */
+.content-container {
+    text-align: center;
+}
+
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Base Button Styles */
+.button {
+    width: 40%; 
+    padding: 8px 20px; 
+    background-color: #A1C7BD;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 200%; 
+    margin: 5px; 
+}
+
+/* Hover Effect */
+.button:hover {
+    background-color: #8399A6;
+}
+
+/* Additional Styles for Different Button */
+.freelance-button {
+    background-color: #5A437A;
+}
+
+.freelance-button:hover {
+    background-color: #8f6fbd;
+}
+
+.employment-button {
+    background-color: #B24E7B;
+    color: #fff;
+}
+
+.employment-button:hover {
+    background-color: #e57cab;
+}
+
+
+
+
+
+
+
