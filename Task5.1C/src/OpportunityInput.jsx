@@ -1,7 +1,9 @@
 import React, { useState } from 'react'; // Import useState
 import './OpportunityInput.css';
 
-function OpportunityInput() {
+function OpportunityInput(props) {
+
+    const { additionalSection } = props; // additional section to be added here 
 
     const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -9,6 +11,8 @@ function OpportunityInput() {
         e.preventDefault();
         setIsSubmitted(true);
     };
+
+    
 
 
     return (
@@ -54,6 +58,8 @@ function OpportunityInput() {
                     <label htmlFor="project">Working Hours:</label>
                     <input type="number" id="workingH" name="workingH"  />
                 </div>
+
+                {additionalSection}
 
                 <button type="submit" className="submit-button">Submit</button>
             </form>
