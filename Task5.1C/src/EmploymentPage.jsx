@@ -19,23 +19,3 @@ function EmploymentPage() {
 
 export default EmploymentPage;
 
-
-
-
-
-
-
-
-
-
-/*
-            <h2>Experience: </h2>
-            <div className="form-group">
-                    <label for="experience" >Experience in</label>
-                    <input type="text" id="experience" name="experience" />
-            </div>  
-            <div className="form-group">
-                    <label for="duration" >For at least</label>
-                    <input type="text" id="duration" name="experdurationience" />
-            </div>  
- */
