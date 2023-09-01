@@ -13,8 +13,8 @@ const app = express();
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const API_KEY = 'de3f68f1a34a94124399186309aea9c9-451410ff-2685c225';
-const DOMAIN = 'sandbox8b5cc6eb46f94c46a77156317ea08cee.mailgun.org';
+const API_KEY = 'unknown';
+const DOMAIN = 'unknown';
 
 const mailgun = new Mailgun(formData);
 const client = mailgun.client({ username: 'api', key: API_KEY });
