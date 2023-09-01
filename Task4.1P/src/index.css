@@ -95,3 +95,14 @@ body {
     margin-bottom: 10px;
 }
 
+
+.more-button {
+    width: 30%; 
+    padding: 10px;
+    background-color: #7f93c1;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
