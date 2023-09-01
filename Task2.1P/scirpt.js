@@ -1,68 +1,55 @@
-const express = require("express")
-const bodyParser = require("body-parser")
-const { Console } = require("console")
-const app = express()
-app.use(bodyParser.urlencoded({extended:true}))
-app.use(express.static("public"))
-const https = require("https")
+import express from "express";
+import bodyParser from "body-parser";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import https from "https";
+import formData from 'form-data';
+import Mailgun from 'mailgun.js';
 
-/* 
-equire("dotenv").config();
-const sgMail = require("@sendgrid/mail"); 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
+const app = express();
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-const sendMail = async (msg) => { 
-    try {
-        await sgMail.send(msg);
-        console.log("Message sent successfully !!!"); 
-    } 
-    catch (error) {
-        
-        console.error(error); 
-        
-        if (error.response) {
-            console.error(error.response.body);
-        }
-    } 
-}
-*/
+const API_KEY = 'de3f68f1a34a94124399186309aea9c9-451410ff-2685c225';
+const DOMAIN = 'sandbox8b5cc6eb46f94c46a77156317ea08cee.mailgun.org';
 
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + "/index.html")
-})
+const mailgun = new Mailgun(formData);
+const client = mailgun.client({ username: 'api', key: API_KEY });
 
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + "/index.html");
+});
 
-app.post('/' , (req,res)=>{
-    const firstname = req.body.first_name
-    const lastname = req.body.last_name
-    const email = req.body.email
+app.post('/', (req, res) => {
+    const firstname = req.body.first_name;
+    const lastname = req.body.last_name;
+    const email = req.body.email;
 
-    res.send("<h1>Something happen</h1>")
+    console.log(firstname, lastname, email);
 
+    var messageData = {
+        from: "Excited User <mailgun@sandbox-123.mailgun.org>",
+        to: email,
+        fname: firstname,
+        lname: lastname,
+        subject: 'Hello',
+        text: `${firstname} ${lastname}, how are you?`
+    };
 
-    responseMessage:[
-        {
-        to_email : email,
-        from_email: "ongm@deakin.edu.au",
-        status: "subscribed",
-        merge_fields: {
-            FNAME : firstname,
-            lNAME : lastname
-        },
-        message: "<h1>Thank you Subcribbing </h1> "
-    }
-    ]
-    
-    
-   
-    
+    client.messages.create(DOMAIN, messageData)
+        .then((response) => {
+            console.log(response);
+            res.send("Email sent successfully");
+        })
+        .catch((error) => {
+            console.error(error);
+            res.send("Email sending failed");
+        });
+});
 
-    
-})
-app.listen(3000, function(){
-console.log("Server is running on port 3000")
-})
-
-
-// API KEY GENERATES: 5ad60bbbaf2c40ca2363d33fcfadbfc9-us21
+app.listen(3000, function () {
+    console.log("Server is running on port 3000");
+});
