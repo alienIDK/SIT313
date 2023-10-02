@@ -30,18 +30,17 @@ const Subscribe = () => {
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
-                // Display a success message to the user
                 alert('Welcome message sent successfully!');
             })
             .catch((error) => {
                 console.error('Error sending data:', error);
-                // Display an error message to the user
                 alert('Error: Failed to send data. Please try again later');
             });
     };
 
     return (
         <div className="Subscribe">
+        
             <form onSubmit={handleSubmit}>
                 <div className="form_container">
                     <h1>Sign Up to Deakin Newsletter</h1>
@@ -59,6 +58,7 @@ const Subscribe = () => {
                         />
                     </div>
 
+                                
                     <div className="col">
                         <input
                             type="text"
@@ -71,6 +71,7 @@ const Subscribe = () => {
                         />
                     </div>
 
+                                
                     <input
                         type="email"
                         className="form-control"
@@ -83,6 +84,8 @@ const Subscribe = () => {
                     <button type="submit" className="button">
                         Subscribe
                     </button>
+
+                            
                 </div>
 
                 
