@@ -24,7 +24,7 @@ const client = mailgun.client({ username: 'api', key: API_KEY });
 app.get('/', (req, res) => {
     const user = {
         username: 'Deakimn',
-        password: '121113',
+        password: 'testing',
     };
     res.json(user); 
 });
@@ -45,11 +45,11 @@ app.post('/', (req, res) => {
         .create(DOMAIN, messageData)
         .then((response) => {
             console.log(response);
-            res.json({ message: 'Email sent successfully' }); // Send JSON response
+            res.json({ message: 'Email sent successfully' }); 
         })
         .catch((error) => {
             console.error(error);
-            res.status(500).json({ error: 'Email sending failed' }); // Send JSON response with an error status
+            res.status(500).json({ error: 'Email sending failed' }); 
         });
 });
 
